@@ -184,7 +184,7 @@ export default function SearchAndFilter({ onFilterChange }: JobFilterProps) {
           <input
             type="text"
             placeholder="Search By Job Title, Role"
-            className="w-full pl-10 pr-4 py-4 border-r-2 border-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-400 text-[#686868] placeholder-[#686868] text-sm"
+            className="w-full pl-10 pr-4 py-4 border-r-2 border-gray-200 focus:outline-none text-[#686868] placeholder-[#686868] text-sm"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

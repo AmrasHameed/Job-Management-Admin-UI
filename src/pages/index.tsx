@@ -1,3 +1,4 @@
+import JobListing from '@/components/JobListing';
 import Navigation from '@/components/Navigation';
 import SearchAndFilter from '@/components/SearchAndFilter';
 import { useCallback, useState } from 'react';
@@ -42,6 +43,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#FBFBFF]">
       <Navigation />
       <SearchAndFilter onFilterChange={handleFilterChange} />
+      <JobListing />
     </div>
   );
 }
