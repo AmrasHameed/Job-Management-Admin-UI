@@ -15,7 +15,7 @@ interface JobFilters {
 
 const locationOptions = ['Remote', 'Banglore', 'Hyderabad','Chennai','Kochi'];
 
-const jobTypeOptions = ['Full-time', 'Part-time', 'Internship'];
+const jobTypeOptions = ['Full-time', 'Part-time', 'Internship', 'Remote'];
 
 export default function SearchAndFilter({ onFilterChange }: JobFilterProps) {
   const [searchQuery, setSearchQuery] = useState('');

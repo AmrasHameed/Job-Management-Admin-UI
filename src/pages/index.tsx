@@ -43,7 +43,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#FBFBFF]">
       <Navigation />
       <SearchAndFilter onFilterChange={handleFilterChange} />
-      <JobListing />
+      <JobListing filters={filters}/>
     </div>
   );
 }

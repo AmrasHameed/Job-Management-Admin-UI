@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
+import JobDetailsForm from './JobDetailsForm';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -128,9 +129,12 @@ const Navigation = () => {
       {isFormOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto">
           <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-md"
+            className="fixed inset-0 bg-black opacity-40 backdrop-blur-md"
             onClick={closeForm}
           ></div>
+          <div className="relative z-10">
+            <JobDetailsForm closeForm={closeForm} />
+          </div>
         </div>
       )}
     </div>
