@@ -10,10 +10,10 @@ import {
   ChevronsRight,
   ChevronsDown,
   Calendar,
-  ChevronsUpDown,
   ArrowUpDown,
 } from 'lucide-react';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 interface FormData {
   jobTitle: string;
@@ -106,25 +106,21 @@ const JobDetailsForm: React.FC<JobFormProps> = ({ closeForm }) => {
     };
 
     try {
-      const response = await fetch(`${backendUrl}/create-job`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(transformedData),
-      });
+      const response = await axios.post('http://localhost:5000/jobs', transformedData);
 
-      const result = await response.json();
-
+      const result = response.data;
+      console.log(result);
       if (result.success) {
         reset();
-        toast.success('Job created successfully!');
-        localStorage.removeItem('jobDraft');
+        toast.success("Job created successfully!");
+        localStorage.removeItem("jobDraft");
         closeForm();
       } else {
-        throw new Error('Failed to create job');
+        throw new Error("Failed to create job");
       }
     } catch (err) {
-      console.error(err);
-      toast.error('Failed to create job.');
+      console.log(err);
+      toast.error("Failed to create job.");
     }
   };
 

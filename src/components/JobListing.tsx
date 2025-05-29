@@ -35,6 +35,7 @@ export default function JobListing({ filters = {} as JobFilters }) {
         const response = await axios.get(
           `${backendUrl}/jobs?${queryParams.toString()}`
         );
+        console.log(response.data)
         setJob(response.data);
       } catch (error) {
         console.error('Failed to fetch jobs:', error);
