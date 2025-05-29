@@ -31,7 +31,7 @@ type JobFormProps = {
 };
 
 const locationOptions = ['Remote', 'Banglore', 'Hyderabad', 'Chennai', 'Kochi'];
-const jobTypeOptions = ['Full-time', 'Part-time', 'Internship'];
+const jobTypeOptions = ['Full-time', 'Part-time', 'Internship', 'Remote'];
 const convertJobType = (type: string) => type.toUpperCase();
 
 const JobDetailsForm: React.FC<JobFormProps> = ({ closeForm }) => {

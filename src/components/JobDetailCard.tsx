@@ -49,34 +49,34 @@ export function JobDetailCard({ job }: { job: Job }) {
 
   return (
     <div className=" rounded-lg overflow-hidden flex flex-col shadow-[0_0_6px_rgba(0,0,0,0.08)]">
-      <div className=" rounded-xl shadow-sm max-w-sm w-full p-5 space-y-4">
+      <div className="rounded-xl shadow-sm max-w-sm w-full p-5 space-y-4 flex flex-col h-full">
         <div className="flex justify-between items-start">
           <div className="bg-gradient-to-t from-[#f1f1f1] to-white p-3 border-2 border-white rounded-xl shadow-[0_2px_4px_rgba(0,0,0,0.05)]">
             <div className="rounded-full w-12 h-12 flex items-center justify-center">
-              <Image
-                src="/logo.svg"
-                alt="Amazon Logo"
-                width={30}
-                height={30}
-                className="object-contain"
-              />
+                <Image
+                  src="/logo.svg"
+                  alt="Amazon Logo"
+                  width={30}
+                  height={30}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+            <div className="bg-[#b0d9ff] text-black px-3 py-1 rounded-lg text-sm font-medium">
+              {postedTime}
             </div>
           </div>
-          <div className="bg-[#b0d9ff] text-black px-3 py-1 rounded-lg text-sm font-medium">
-            {postedTime}
-          </div>
-        </div>
-        <div className="space-y-3">
-          <div>
-            <h2 className="text-2xl font-bold text-black">{job.title}</h2>
-          </div>
+          <div className="space-y-3 flex-grow">
+            <div>
+              <h2 className="text-2xl font-bold text-black">{job.title}</h2>
+            </div>
 
-          <div className="flex justify-between text-gray-600 w-full">
-            <div className="flex items-center space-x-1">
-              <Image
-                src="/Experience.svg"
-                alt=""
-                width={5}
+            <div className="flex justify-between text-gray-600 w-full">
+              <div className="flex items-center space-x-1">
+                <Image
+                  src="/Experience.svg"
+                  alt=""
+                  width={5}
                 height={5}
                 className="w-5 h-5"
               />
@@ -104,7 +104,7 @@ export function JobDetailCard({ job }: { job: Job }) {
             </div>
           </div>
 
-          <ul className="list-disc pl-5 space-y-0.5 text-gray-600 text-sm">
+          <ul className="list-disc pl-5 space-y-0.5 text-gray-600 text-sm h-12 overflow-hidden">
             {descriptionLines.slice(0, 2).map((line, index) => (
               <li key={index}>{line}</li>
             ))}
