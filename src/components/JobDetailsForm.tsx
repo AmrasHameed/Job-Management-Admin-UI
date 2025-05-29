@@ -105,7 +105,7 @@ const JobDetailsForm: React.FC<JobFormProps> = ({ closeForm }) => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/jobs', transformedData);
+      const response = await axios.post('https://job-management-backend-e2g9.onrender.com/jobs', transformedData);
 
       const result = response.data;
       console.log(result);

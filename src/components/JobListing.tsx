@@ -11,7 +11,7 @@ interface JobFilters {
   salary: [number, number];
 }
 
-const backendUrl = 'http://localhost:5000';
+const backendUrl = 'https://job-management-backend-e2g9.onrender.com';
 
 export default function JobListing({ filters = {} as JobFilters }) {
   const [job, setJob] = useState([]);
