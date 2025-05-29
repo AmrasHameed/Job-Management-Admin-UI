@@ -30,7 +30,6 @@ type JobFormProps = {
   closeForm: () => void;
 };
 
-const backendUrl = 'http://localhost:5000';
 const locationOptions = ['Remote', 'Banglore', 'Hyderabad', 'Chennai', 'Kochi'];
 const jobTypeOptions = ['Full-time', 'Part-time', 'Internship'];
 const convertJobType = (type: string) => type.toUpperCase();
